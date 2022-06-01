@@ -1,5 +1,5 @@
 import stack as check
-
+# We hold the new elements in the stack new. When the old is empty, we reverse the new by popping all the new into the old. If the old is not empty, we directly work on the old.
 class MyQueue:
     def __init__(self):
         self.new = check.Stack()
@@ -10,6 +10,7 @@ class MyQueue:
 
     def push(self, value):
         self.new.push(value)
+
 
     def shiftStack(self):
         if(self.old.isEmpty()):
