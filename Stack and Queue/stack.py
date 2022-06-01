@@ -24,7 +24,10 @@ class Stack:
     
     def size(self):
         return len(self.data)
-    
+        
+    def print(self):
+        for i in self.data:
+            print(i, end=" ")
 # stack = Stack()
 # print(stack.isEmpty())
 # stack.pop()
