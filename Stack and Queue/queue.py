@@ -22,13 +22,16 @@ class Queue:
         else:
             print("Queue is empty, nothing to peek!")
     
-queue = Queue()
-print(queue.isEmpty())
-queue.add(0)
-queue.add(1)
-queue.add(2)
-queue.add(3)
-queue.add(4)
-print(queue.peek())
-print(queue.remove())
-print(queue.peek())
+    def getSize(self):
+        return len(self.data)
+    
+# queue = Queue()
+# print(queue.isEmpty())
+# queue.add(0)
+# queue.add(1)
+# queue.add(2)
+# queue.add(3)
+# queue.add(4)
+# print(queue.peek())
+# print(queue.remove())
+# print(queue.peek())
