@@ -67,8 +67,8 @@ def nodesAtEachDepthDFS(tree):
     return result
 
 resultDFS = (nodesAtEachDepthDFS(root))
-resultBFS = (nodesAtEachDepthBFS(root))
 print(resultDFS)
+resultBFS = (nodesAtEachDepthBFS(root))
 
 for i in resultBFS:
     for j in i:
