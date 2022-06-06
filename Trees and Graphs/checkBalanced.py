@@ -32,26 +32,22 @@ array = [1, 2, 3, 4, 5, 6, 7]
 
 root = arrayToBST(array)
 
-
-def getHeight(tree):
-    height = [0]
+def in_order_traversal(tree):
+    elements = []
     def dfs(node, depth):
         if node.left != None:
-            dfs(node.left, depth+1)
+            dfs(node.left, depth + 1)
+        elements.append(node.value)
         if node.right != None:
-            dfs(node.right, depth+1)
-        if depth > height[0]:
-            height[0] = depth
-        return height[0]
-    return dfs(tree, 0)
-    
-def check(tree):
-    left = getHeight(tree.left)
-    right = getHeight(tree.right)
-    if max(left, right) - min(left, right) > 1:
-        return False
+            dfs(node.right, depth + 1)
+    dfs(tree, 0)
+    return elements
+
+result = in_order_traversal(root)
+def check_order(array):
+    for i in range(len(array) - 1):
+        if(array[i] > array[i+1]):
+            return False
     return True
-print(getHeight(root))
 
-print(check(root))
-
+print(check_order(result))
