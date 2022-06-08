@@ -18,3 +18,19 @@ class Tree:
                     self.right.insert(value)
         else:
             self.value = value
+
+    def postOrderTraversal(self):
+        if self.left:
+            self.left.postOrderTraversal()
+        if self.right:
+            self.right.postOrderTraversal()
+        print(self.value)
+
+tree = Tree(20)
+tree.insert(10)
+tree.insert(30)
+tree.insert(5)
+tree.insert(15)
+tree.insert(3)
+tree.insert(7)
+tree.postOrderTraversal()
