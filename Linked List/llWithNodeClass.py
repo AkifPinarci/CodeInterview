@@ -1,13 +1,8 @@
 class Node:
-    def __init__(self, dataval=None):
-        self.val = dataval
+    def __init__(self, val=None):
+        self.val = val
         self.next = None
 
-    def addToTail(self, val):
-        end = Node(val)
-        while(self.next is not None):
-            self = self.next
-        self.next = end
 
     def delete(self, val):
         head = self
@@ -23,6 +18,11 @@ class Node:
             head = head.next
         return self
              
+    def addToTail(self, val):
+        end = Node(val)
+        while(self.next is not None):
+            self = self.next
+        self.next = end
 
 
 head = Node(0)
